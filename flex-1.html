@@ -1,0 +1,87 @@
+<title>Flex Layout - Parte 1</title>
+<link href="base.css" rel="stylesheet" />
+<link href="flex.css" rel="stylesheet" />
+
+<h1>Container com Flex</h1>
+<p>O primeiro passo é atribuir ao container a propriedade <i>display: flex</i>.
+    No primeiro exemplo abaixo temos uma situação normal, com <i>display: block</i>.
+    No segundo exemplo, temos o uso de <i>display: flex</i>, mas sem nenhuma manipulação especial nos ítens.
+</p>
+
+<h2>Blocos sem uso do layout flex</h2>
+<p>Perceba o funcionamento padrão do layout, normal.</p>
+<section class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</section>
+
+<h2>Layout Flex</h2>
+<p>Repare que ao adicionar flex ao container, os ítens perdem a característica "block" e parecem "in line"</p>
+<section class="container flex">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</section>
+
+<h2>Layout Flex com muitos ítens</h2>
+<p>O comportamento padrão do layout flex é ir colocando os ítens um ao lado do outro, conforme seu conteúdo e se
+a necessidade de espaço exceder o container, por padrão, os ítens são para fora da borda.</p>
+<section class="container flex">
+    <div class="item">Teste 1</div>
+    <div class="item">Teste 2</div>
+    <div class="item">Teste 3</div>
+    <div class="item">Teste 4</div>
+    <div class="item">Teste 5</div>
+    <div class="item">Teste 6</div>
+    <div class="item">Teste 7</div>
+</section>
+
+<h1>Controlando os Ítens</h1>
+Existem muitas opções de controle dos ítens no layout flex. Vamos ver as duas mais básicas.
+
+<h2>flex-wrap: wrap;</h2>
+Ao adicionar a propriedade <i>flex-wrap: wrap</i> no container, os ítens passam a quebrar quando o espaço finaliza.
+<section class="container flex flex-wrap">
+    <div class="item">Teste 1</div>
+    <div class="item">Teste 2</div>
+    <div class="item">Teste 3</div>
+    <div class="item">Teste 4</div>
+    <div class="item">Teste 5</div>
+    <div class="item">Teste 6</div>
+    <div class="item">Teste 7</div>
+</section>
+
+<h2>Controle do espaço ocupado pelos ítens</h2>
+<p>Se adicionarmos a propriedade <i>flex: 1</i> aos ítens, eles passam a tentar ocupar todo o espaço disponvível no layout.
+O valor "1" é como uma proporção, estamos dizendo que aquele ítem deve ocupar proporção 1 do espaço.</p>
+<section class="container flex">
+    <div class="item item-flex-1">Teste 1</div>
+    <div class="item item-flex-1">Teste 2</div>
+    <div class="item item-flex-1">Teste 3</div>
+</section>
+
+<h2>Flex 2</h2>
+<p>Repare o que acontece se mudarmos o ítem 3 para usar o valor <i>flex: 2</i>.
+Ele assume o dobro do tamanho dos demais ítens.</p>
+<section class="container flex">
+    <div class="item item-flex-1">Teste 1</div>
+    <div class="item item-flex-1">Teste 2</div>
+    <div class="item item-flex-2">Teste 3</div>
+</section>
+
+<h2>Flex 0.5</h2>
+<p>Agora, vamos adicionar um quarto elemento com a propriedade <i>flex: 0.5</i>.
+Veremos que o elemento 3 terá 4 vezes o tamanho do elemento 4.</p>
+<section class="container flex">
+    <div class="item item-flex-1">Teste 1</div>
+    <div class="item item-flex-1">Teste 2</div>
+    <div class="item item-flex-2">Teste 3</div>
+    <div class="item item-flex-meio">Teste 4</div>
+</section>
+
+<div class="exemplo">
+    <h2>Exemplo: Layout de 3 Colunas</h2>
+    <p>Como demonstração em um exemplo prático, veja a aplicação do fliex layout para desenhar um layout simples de 3 colunas:</p>
+    <a href="exemplo-1-layout-3-colunas.html" target="_blank">Exemplo Layout 3 Colunas</a>
+</div>

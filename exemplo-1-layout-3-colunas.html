@@ -1,0 +1,48 @@
+<title>Exemplo 1 - Layout com 3 Colunas</title>
+
+<style>
+    body {
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .container > div {
+        flex: 1;
+        height: 400px;
+    }
+
+    .coluna-1 {
+        background-color: #eee;
+    }
+
+    .coluna-2 {
+        background-color: #ddd;
+    }
+
+    .coluna-3 {
+        background-color: #ccc;
+    }
+</style>
+
+<header>
+    <h2>Cabeçalho</h2>
+</header>
+
+<div class="container">
+    <div class="coluna-1">
+        <h2>Menu</h2>
+    </div>
+    <div class="coluna-2">
+        <h2>Coluna 2</h2>
+    </div>
+    <div class="coluna-3">
+        <h2>Coluna 3</h2>
+    </div>
+</div>
+
+<footer>
+    <h2>Rodapé</h2>
+</footer>

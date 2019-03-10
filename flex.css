@@ -1,0 +1,7 @@
+
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+
+.item-flex-meio { flex: 0.5; }
+.item-flex-1 { flex: 1; }
+.item-flex-2 { flex: 2; }
